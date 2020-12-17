@@ -95,11 +95,6 @@ a {
 .logo {
   display: flex;
   align-items: center;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer a {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo .logo-half,
@@ -112,8 +107,6 @@ a {
 .site-nav {
   display: flex;
   margin-left: 93px;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* у первого елемента нет соседа справа, селектор не применяется */
 .site-nav.list .item + .item {
@@ -130,11 +123,16 @@ a {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--title-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.site-nav .link {
+  color: var(--title-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-info {
@@ -143,8 +141,6 @@ a {
   margin: 0;
   margin-left: auto;
   padding: 0;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-info .item:not(:last-child) {
@@ -156,10 +152,12 @@ a {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contact {
