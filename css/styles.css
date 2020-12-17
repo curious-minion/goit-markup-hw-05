@@ -95,6 +95,11 @@ a {
 .logo {
   display: flex;
   align-items: center;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer a {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo .logo-half,
@@ -461,18 +466,26 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--icons-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--basic-white);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links.footer .link {
   color: var(--basic-white);
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links .link:hover,
 .social-links .link:focus {
   color: var(--basic-white);
-  background: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.social-links.footer a.link:hover {
+  background-color: var(--accent-color);
 }
 
 .icon-socials {
@@ -508,7 +521,8 @@ img {
 
   color: var(--icons-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list .link:hover,
